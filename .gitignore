@@ -1,0 +1,7 @@
+temp/
+tools/
+*.keys
+*.elf
+*.nsp
+main
+.DS_Store
