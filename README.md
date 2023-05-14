@@ -4,7 +4,7 @@
 
 注1：仅供学习研究，风险自负   
 注2：命令行面向 *nix 用户，部分操作 Windows 用户可以使用 GUI 来完成  
-注3：本教程不针对某个应用，无法使用此项目直接完成反编译。
+注3：本教程不针对某个应用，无法使用此项目直接完成反编译。  
 注4：参考 [How to patch Nintendo Switch Applications in IDA](https://gist.github.com/Slluxx/502e3c7d0ebe8608af2c74e8cafd01cb) 详细讲解各个步骤，满足程序员的好奇心。  
 
 ### 步骤简介
@@ -18,11 +18,11 @@
 
 关于如何 dump nsp安装包，或者如何解压，有多种方式，选择你习惯的方式即可，下面记录了我的操作流程。
 
-```shell
-# 1. 使用 nxdumptool 以默认参数导出所有nsp
-# 2. 使用 Lockpick_RCM 备份 title.keys 和 prod.keys，放在项目根目录
-# 3. 脚本中的 titlekey 从备份的 title.keys 中可以找到
+1. 使用 nxdumptool 以默认参数导出所有nsp
+2. 使用 Lockpick_RCM 备份 title.keys 和 prod.keys，放在项目根目录
+3. 从备份的 title.keys 中脚本找到对应 nsp 的 titlekey
 
+```shell
 # 请注意，解压脚本只用于记录hactool的各项功能，并不能实际运行，需要根据情况自行修改
 ./unpack.sh
 ```
@@ -58,9 +58,11 @@ elf2nso main.elf temp/data/exefs/main
 
 前面说过了，只需要将修改后的 main，直接放在内存卡 `atmosphere/contents/0000000000000000/exefs` （0...0 对应游戏/应用ID）目录下，大气层在运行时就会自动加载修改后的 main。
 
+教程到这里就愉快的结束了。
+
 ### 第三步 重新打包（可选）
 
-如果你很想打包成一个整体，那么可以使用 hacpack 来做到，你也可以使用 hacpack 在 Windows 下的 GUI 工具来完成。  
+如果你很想打包成一个新的 nsp，那么可以使用 hacpack 来做到，你也可以使用 hacpack 在 Windows 下的 GUI 工具来完成。  
 
 ```shell
 # 同样的，脚本只演示了 hacpack 的常用命令，需要修改这个脚本以适应具体的情况
