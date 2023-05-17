@@ -28,10 +28,6 @@ hactool -k prod.keys --titlekey=${update_titlekey} --exefsdir=temp/data/exefs \
 hactool -k prod.keys --titlekey=${base_titlekey}  --romfsdir=temp/data/romfs \
    ${base_outdir}/00000000000000000000000000000000.nca
 
-hactool -k prod.keys --titlekey=${update_titlekey} --exefsdir=temp/data/exefs \
-   --basenca ${base_outdir}/00000000000000000000000000000000.nca \
-   ${update_outdir}/00000000000000000000000000000000.nca
-
 # 解压 control nca
 hactool -k prod.keys --titlekey=${update_titlekey} --romfsdir=temp/data/control \
    ${update_outdir}/00000000000000000000000000000000.nca
