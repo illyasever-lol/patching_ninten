@@ -7,6 +7,8 @@
 注3：本教程不针对某个应用，无法使用此项目直接完成反编译。  
 注4：参考 [How to patch Nintendo Switch Applications in IDA](https://gist.github.com/Slluxx/502e3c7d0ebe8608af2c74e8cafd01cb) 详细讲解各个步骤，满足程序员的好奇心。  
 
+前往所需文件：[github.com/xfangfang/ns-patching-example](https://github.com/xfangfang/ns-patching-example/releases)
+
 ### 步骤简介
 
 1. 解压 nsp 中的主程序
