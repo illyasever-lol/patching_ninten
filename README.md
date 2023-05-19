@@ -22,7 +22,7 @@
 
 1. 使用 nxdumptool 以默认参数导出所有nsp
 2. 使用 Lockpick_RCM 备份 title.keys 和 prod.keys，放在项目根目录
-3. 从备份的 title.keys 中脚本找到对应 nsp 的 titlekey
+3. 从备份的 title.keys 中找到对应 nsp 的 titlekey
 
 ```shell
 # 请注意，解压脚本只用于记录hactool的各项功能，并不能实际运行，需要根据情况自行修改
